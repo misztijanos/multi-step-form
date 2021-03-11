@@ -1,0 +1,12 @@
+.app {
+  display: flex;
+  height: 100vh;
+  opacity: 0.6;
+}
+
+.form-container {
+  opacity: 1;
+  width: 700px;
+  margin: auto;
+  align-self: center;
+}

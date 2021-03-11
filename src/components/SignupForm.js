@@ -1,24 +1,37 @@
 import { Switch, Route, BrowserRouter, NavLink } from "react-router-dom";
-
+import styles from "./SignupForm.module.css";
 import ProfileForm from "./ProfileForm";
 import SocialForm from "./SocialForm";
 import ReviewForm from "./ReviewForm";
 import { SignupContextProvider } from "./SignupContext";
-
+import { FaUserCircle } from "react-icons/fa";
+import { FaShareAlt } from "react-icons/fa";
+import { FaCircle } from "react-icons/fa";
 const SignupForm = () => {
   return (
     <BrowserRouter>
       <SignupContextProvider>
-        <nav>
+        <nav className={styles.nav_container}>
           <ul>
             <li>
-              <NavLink to="/">Profile</NavLink>
+              <NavLink to="/">
+                <FaUserCircle className={styles.icon} />
+                Profile
+                <FaCircle className={styles.circle_icon} />
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/social">Social</NavLink>
+              <NavLink to="/social">
+                <FaShareAlt className={styles.icon} />
+                Social
+                <FaCircle className={styles.circle_icon} />
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/review">Review</NavLink>
+              <NavLink to="/review">
+                Review
+                <FaCircle className={styles.circle_icon} />
+              </NavLink>
             </li>
           </ul>
         </nav>

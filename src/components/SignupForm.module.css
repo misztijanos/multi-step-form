@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
+:root {
+  --light-green: #aedac4;
+  --very-dark-green: #1f441e;
+}
+
+.nav_container {
+  width: 100%;
+  border-bottom: 1px solid darkgreen;
+  padding-bottom: 8px;
+  font-family: "Merriweather", serif;
+  font-size: 1.2rem;
+}
+
+.nav_container ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav_container ul li:last-child {
+  margin-left: 200px;
+}
+
+.nav_container a {
+  position: relative;
+  text-decoration: none;
+  color: darkgreen;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 6px;
+  font-size: 1rem;
+  color: red;
+}
+
+.circle_icon {
+  font-size: 0.5rem;
+  position: absolute;
+  bottom: -0.8rem;
+  left: -4px;
+}

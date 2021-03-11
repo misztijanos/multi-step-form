@@ -4,7 +4,7 @@ import { useSignupContext } from "./SignupContext";
 const ProfileForm = () => {
   const { register, errors, handleSubmit } = useForm();
   const history = useHistory();
-  const { setProfile } = useSignupContext();
+  const { profile, setProfile } = useSignupContext();
 
   const onSubmit = (data) => {
     setProfile(data);
@@ -17,6 +17,7 @@ const ProfileForm = () => {
         type="text"
         name="name"
         placeholder="What's your name?"
+        value={profile.name}
         ref={register({ required: true })}
       />
       <p>{errors.name && "Your name is required"}</p>
@@ -24,6 +25,7 @@ const ProfileForm = () => {
         type="email"
         name="email"
         placeholder="What's your email?"
+        value={profile.email}
         ref={register({
           required: true,
           pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
