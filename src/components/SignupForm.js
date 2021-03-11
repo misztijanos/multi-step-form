@@ -1,37 +1,34 @@
-import { Switch, Route, BrowserRouter, Link } from "react-router-dom";
+import { Switch, Route, BrowserRouter, NavLink } from "react-router-dom";
 
 import ProfileForm from "./ProfileForm";
 import SocialForm from "./SocialForm";
 import ReviewForm from "./ReviewForm";
+import { SignupContextProvider } from "./SignupContext";
 
 const SignupForm = () => {
   return (
     <BrowserRouter>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Profile</Link>
-          </li>
-          <li>
-            <Link to="/social">Social</Link>
-          </li>
-          <li>
-            <Link to="/review">Review</Link>
-          </li>
-        </ul>
-      </nav>
+      <SignupContextProvider>
+        <nav>
+          <ul>
+            <li>
+              <NavLink to="/">Profile</NavLink>
+            </li>
+            <li>
+              <NavLink to="/social">Social</NavLink>
+            </li>
+            <li>
+              <NavLink to="/review">Review</NavLink>
+            </li>
+          </ul>
+        </nav>
 
-      <Switch>
-        <Route path="/" exact>
-          <ProfileForm />
-        </Route>
-        <Route path="/social">
-          <SocialForm />
-        </Route>
-        <Route path="/review">
-          <ReviewForm />
-        </Route>
-      </Switch>
+        <Switch>
+          <Route path="/" exact component={ProfileForm} />
+          <Route path="/social" component={SocialForm} />
+          <Route path="/review" component={ReviewForm} />
+        </Switch>
+      </SignupContextProvider>
     </BrowserRouter>
   );
 };

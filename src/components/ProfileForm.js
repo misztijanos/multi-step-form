@@ -1,8 +1,15 @@
-import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { useSignupContext } from "./SignupContext";
 const ProfileForm = () => {
   const { register, errors, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const history = useHistory();
+  const { setProfile } = useSignupContext();
+
+  const onSubmit = (data) => {
+    setProfile(data);
+    history.push("./social");
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate>
