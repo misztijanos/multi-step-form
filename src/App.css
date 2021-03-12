@@ -10,3 +10,9 @@
   margin: auto;
   align-self: center;
 }
+
+@media only screen and (max-width: 600px) {
+  .form-container {
+    width: 450px;
+  }
+}

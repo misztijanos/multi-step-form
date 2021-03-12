@@ -14,21 +14,21 @@ const SignupForm = () => {
         <nav className={styles.nav_container}>
           <ul>
             <li>
-              <NavLink to="/">
+              <NavLink activeClassName={styles.selected} to="/" exact>
                 <FaUserCircle className={styles.icon} />
                 Profile
                 <FaCircle className={styles.circle_icon} />
               </NavLink>
             </li>
             <li>
-              <NavLink to="/social">
+              <NavLink activeClassName={styles.selected} to="/social">
                 <FaShareAlt className={styles.icon} />
                 Social
                 <FaCircle className={styles.circle_icon} />
               </NavLink>
             </li>
             <li>
-              <NavLink to="/review">
+              <NavLink activeClassName={styles.selected} to="/review" exact>
                 Review
                 <FaCircle className={styles.circle_icon} />
               </NavLink>

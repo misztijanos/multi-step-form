@@ -3,6 +3,8 @@
 :root {
   --light-green: #aedac4;
   --very-dark-green: #1f441e;
+  --cerise: #de3163; /*it's red with a purple? tinge*/
+  --carmine: #960018;
 }
 
 .nav_container {
@@ -11,6 +13,7 @@
   padding-bottom: 8px;
   font-family: "Merriweather", serif;
   font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .nav_container ul {
@@ -19,7 +22,7 @@
 }
 
 .nav_container ul li:last-child {
-  margin-left: 200px;
+  margin-left: 30%;
 }
 
 .nav_container a {
@@ -30,10 +33,18 @@
   align-items: center;
 }
 
+.nav_container a.selected {
+  color: black;
+}
+
+.nav_container a:active {
+  color: black;
+}
+
 .icon {
   margin-right: 6px;
   font-size: 1rem;
-  color: red;
+  color: var(--carmine);
 }
 
 .circle_icon {
@@ -41,4 +52,59 @@
   position: absolute;
   bottom: -0.8rem;
   left: -4px;
+}
+
+.form_container {
+  width: 64%;
+  height: 300px;
+  background: #fff;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 60px;
+  padding: 50px;
+}
+
+.form_container h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.form_container input {
+  width: 86%;
+  height: 4rem;
+  background: #ddd;
+  border: none;
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 0 30px;
+  font-size: 1.4rem;
+}
+
+input.button {
+  background-color: var(--cerise);
+  color: white;
+  width: 150px;
+  height: 3rem;
+  float: right;
+  cursor: pointer;
+}
+
+.error {
+  position: relative;
+  top: -20px;
+  left: 30px;
+  color: var(--cerise);
+}
+
+.review {
+  font-size: 1.2rem;
+  margin: 0 0 20px 20px;
+  color: var(--carmine);
+}
+.review:last-of-type {
+  margin-bottom: 100px;
+}
+.review strong {
+  font-weight: bold;
 }

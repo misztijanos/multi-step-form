@@ -1,5 +1,5 @@
 import "./App.css";
-import background from "./817603.jpg";
+import background from "./817603_l.jpg";
 
 import SignupForm from "./components/SignupForm";
 
