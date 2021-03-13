@@ -1,6 +1,8 @@
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useSignupContext } from "./SignupContext";
+import Animator from "./Animator";
+
 import styles from "./SignupForm.module.css";
 
 const SocialForm = () => {
@@ -14,7 +16,7 @@ const SocialForm = () => {
   };
 
   return (
-    <div className={styles.form_container}>
+    <Animator>
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         <h1>Add your social media</h1>
         <input
@@ -39,7 +41,7 @@ const SocialForm = () => {
         </p>
         <input className={styles.button} type="submit" value="Next" />
       </form>
-    </div>
+    </Animator>
   );
 };
 export default SocialForm;

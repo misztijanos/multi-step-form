@@ -1,14 +1,16 @@
 import { useSignupContext } from "./SignupContext";
+
+import Animator from "./Animator";
 import styles from "./SignupForm.module.css";
 
 const ReviewForm = () => {
   const { profile, social } = useSignupContext();
   const upload = () =>
     alert(
-      "Thank you for trying my app. This is a user interface and state management demo project, so your data won't be stored externally, or transmitted over the web."
+      "Great Success!! Thank you for trying my app. This is a user interface and state management demo project, so your data won't be stored externally, or transmitted over the web."
     );
   return (
-    <div className={styles.form_container}>
+    <Animator>
       <p className={styles.review}>
         <strong>Name:</strong> {profile.name}
       </p>
@@ -27,7 +29,7 @@ const ReviewForm = () => {
         value="Submit"
         onClick={upload}
       />
-    </div>
+    </Animator>
   );
 };
 export default ReviewForm;

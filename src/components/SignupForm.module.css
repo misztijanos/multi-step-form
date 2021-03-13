@@ -41,6 +41,11 @@
   color: black;
 }
 
+.nav_container a.disabled {
+  cursor: pointer;
+  color: #999;
+}
+
 .icon {
   margin-right: 6px;
   font-size: 1rem;
