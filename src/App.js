@@ -5,7 +5,14 @@ import SignupForm from "./components/SignupForm";
 
 function App() {
   return (
-    <div className="app" style={{ background: `url(${background})` }}>
+    <div
+      className="app"
+      style={{
+        background: `url(${background})`,
+        backgroundSize: "cover",
+        backgroundPosition: "top left",
+      }}
+    >
       <div className="form-container">
         <SignupForm />
       </div>
